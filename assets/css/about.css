@@ -1,3 +1,7 @@
+.about-hero-image {
+  width: -webkit-fill-available;
+}
+
 .about-primary-heading {
   font-weight: 400;
   font-size: 32px;
