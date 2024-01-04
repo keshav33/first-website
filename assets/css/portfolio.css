@@ -20,3 +20,11 @@
   font-size: 18px;
   width: 200px;
 }
+
+@media (max-width: 450px) {
+  .portfolio-switch-container .nav-link {
+    padding: 20px;
+    font-size: 18px;
+    width: 140px;
+  }
+}

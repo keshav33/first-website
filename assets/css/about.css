@@ -166,6 +166,14 @@
   }
 }
 
+@media (max-width: 780px) {
+  .hire-us-heading {
+  }
+  .hire-us-subheading {
+    width: 600px;
+  }
+}
+
 @media (max-width: 630px) {
   .what-we-do-image {
     width: 400px;
@@ -182,6 +190,21 @@
     font-size: 24px;
     line-height: 40px;
     color: #fff;
+  }
+
+  .hire-us-subheading {
+    width: 400px;
+  }
+}
+
+@media (max-width: 520px) {
+  .hire-us-heading {
+    text-align: center;
+    line-height: 40px;
+    width: 300px;
+  }
+  .hire-us-subheading {
+    width: 300px;
   }
 }
 

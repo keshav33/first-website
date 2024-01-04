@@ -1,0 +1,118 @@
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog-heading-container {
+  background-image: url("https://shadesandmotion.com/wp-content/uploads/2023/04/Backdrop-new-2-1.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 20vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.blog-heading {
+  font-weight: 500;
+  font-size: 62px;
+}
+
+.blog-card {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 400px;
+  border-radius: 8px;
+}
+
+.blogs-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 40px;
+  column-gap: 60px;
+  row-gap: 80px;
+}
+
+.blog-card-image {
+  width: 400px;
+  height: 400px;
+}
+
+.blog-card-content-heading {
+  padding: 20px;
+  width: 300px;
+}
+
+.blog-card-content-description {
+  padding: 20px;
+  width: 380px;
+  font-weight: 100;
+  font-size: 14px;
+}
+
+@media (max-width: 1400px) {
+  .blogs-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1000px) {
+  .blogs-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .blog-card {
+    width: 300px;
+  }
+  .blog-card-image {
+    width: 300px;
+    height: 300px;
+  }
+  .blog-card-content-heading {
+    width: 280px;
+  }
+
+  .blog-card-content-description {
+    width: 300px;
+  }
+}
+
+@media (max-width: 770px) {
+  .blogs-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .blog-card {
+    width: 400px;
+  }
+  .blog-card-image {
+    width: 400px;
+    height: 400px;
+  }
+  .blog-card-content-heading {
+    width: 380px;
+  }
+
+  .blog-card-content-description {
+    width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-card {
+    width: 300px;
+  }
+  .blog-card-image {
+    width: 300px;
+    height: 300px;
+  }
+  .blog-card-content-heading {
+    width: 280px;
+  }
+
+  .blog-card-content-description {
+    width: 300px;
+  }
+  .blogs-container {
+    padding: 20px;
+  }
+}
