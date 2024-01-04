@@ -1,0 +1,22 @@
+.portfolio-container {
+  text-align: center;
+  background-image: url("https://shadesandmotion.com/wp-content/uploads/2023/04/Backdrop-new-2-1.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.portfolio-switch-container {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-switch-container .nav-link {
+  color: black;
+  background: white;
+  padding: 20px;
+  font-size: 18px;
+  width: 200px;
+}
