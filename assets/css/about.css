@@ -208,7 +208,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 490px) {
   .about-primary-heading {
     font-weight: 400;
     font-size: 24px;
@@ -235,5 +235,9 @@
   .what-we-do-image {
     width: 300px;
     height: 300px;
+  }
+
+  .about-our-team-heading {
+    font-size: 32px;
   }
 }

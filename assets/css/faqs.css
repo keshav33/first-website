@@ -1,0 +1,24 @@
+.faqs-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.faqs-heading-container {
+  background-image: url("https://shadesandmotion.com/wp-content/uploads/2023/04/Backdrop-new-2-1.webp");
+  background-position: center;
+  height: 20vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.faqs-heading {
+  font-weight: 500;
+  font-size: 62px;
+}
+
+.faqs-questions-container .accordion {
+  width: 80vw;
+}
