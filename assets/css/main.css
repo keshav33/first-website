@@ -137,8 +137,16 @@ header .navbar {
   font-size: 12px;
 }
 
+.padding-top-30 {
+  padding: 30px;
+}
+
 .margin-top-20 {
   margin-top: 20px;
+}
+
+.margin-top-30 {
+  margin-top: 30px;
 }
 
 .margin-bottom-20 {
