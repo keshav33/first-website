@@ -8,6 +8,12 @@
   min-width: 100vw;
 }
 
+.portfolio-heading {
+  font-weight: 500;
+  font-size: 62px;
+  padding: 30px;
+}
+
 .portfolio-switch-container {
   display: flex;
   justify-content: center;
@@ -26,5 +32,10 @@
     padding: 20px;
     font-size: 18px;
     width: 140px;
+  }
+  .portfolio-heading {
+    font-weight: 500;
+    font-size: 38px;
+    padding: 30px;
   }
 }
