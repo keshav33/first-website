@@ -2,7 +2,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --nav-hover-color: rgb(142, 203, 222);
+  --black-color: #0f0f0f;
+  --white-color: #eae9e8;
+  --green-color: #2cb226;
+  --hover-green-color: #99e752;
+  --green-gradient: linear-gradient(
+    0deg,
+    var(--green-color),
+    var(--hover-green-color)
+  );
+  --header-size: 60px;
 }
 
 * {
@@ -10,6 +19,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  background-color: var(--black-color);
 }
 
 header {
@@ -25,15 +35,16 @@ header .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
 .navbar .logo {
-  color: black;
+  color: var(--white-color);
   font-weight: 600;
   font-size: 2.1rem;
   text-decoration: none;
+  width: 120px;
+  margin: 0px 40px;
 }
 
 .navbar .menu-links {
@@ -44,13 +55,14 @@ header .navbar {
 }
 
 .navbar a {
-  color: black;
+  color: var(--white-color);
+  font-size: 20px;
   text-decoration: none;
   transition: 0.2s ease;
 }
 
 .navbar a:hover {
-  color: var(--nav-hover-color);
+  color: var(--green-color);
 }
 
 .navbar .logo:hover {
@@ -58,21 +70,25 @@ header .navbar {
 }
 
 .navbar-main {
-  background-color: #fff;
+  background-color: var(--black-color);
+  padding-bottom: 10px;
 }
 
 .header-button {
-  font-size: 17px;
-  font-weight: 200;
+  font-size: 18px;
+  font-weight: 500;
   background-color: transparent;
-  background-image: linear-gradient(105deg, #fc6a47 16%, #ff9839 100%);
-  padding: 15px 30px 14px 30px;
+  background-image: var(--green-gradient);
+  padding: 12px 24px;
   border: none;
-  color: #fff;
+  color: var(--black-color);
   cursor: pointer;
+  border-radius: 6px;
+  margin: 20px 40px;
 }
 
 #close-menu-btn {
+  color: var(--green-color);
   position: absolute;
   right: 20px;
   top: 20px;
@@ -81,39 +97,35 @@ header .navbar {
 }
 
 #hamburger-btn {
-  color: black;
+  color: var(--green-color);
   cursor: pointer;
   display: none;
 }
 
 .hero-section {
-  /* height: 100vh; */
-  padding: 0 20px;
-  margin-top: 100px;
+  margin-top: var(--header-size);
 }
 
 .hero-section .content {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  min-height: 100vh;
 }
 
 .footer {
-  background-color: #f3f3f3;
+  background-color: var(--black-color);
+  color: var(--white-color);
   width: 100vw;
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 40px;
 }
 
 .footer-brand-content-description {
-  width: 60%;
+  width: 90%;
 }
 
 .footer-brand-content {
-  flex: 2;
+  flex: 1;
 }
 
 .footer-quick-links {
@@ -124,26 +136,29 @@ header .navbar {
   flex: 1;
 }
 
-.min-footer {
-  background-color: #202020;
-  color: #fff;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.min-footer-copyright {
-  font-weight: 100;
-  font-size: 12px;
+.footer-copyright {
+  font-weight: 300;
+  font-size: 16px;
 }
 
 .footer-quick-links > ul > li > a {
   text-decoration: none;
-  color: #000;
+  color: var(--white-color);
 }
 
 .footer-quick-links > ul > li > a:hover {
-  color: #000000b5;
+  color: var(--green-color);
+}
+
+.gradient-text {
+  background: var(--green-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-logo {
+  width: 200px;
 }
 
 .padding-top-30 {
@@ -174,11 +189,13 @@ header .navbar {
   margin-top: 60px;
 }
 
-.gradient-text {
-  background: linear-gradient(187deg, #2a5bff 30%, #fc6a47 68%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+@media (max-width: 1200px) {
+  .header-button {
+    font-size: 14px;
+  }
+  .navbar a {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -215,10 +232,18 @@ header .navbar {
     right: -250px;
     width: 250px;
     height: 100%;
-    background: #fff;
+    background: var(--black-color);
     flex-direction: column;
     padding: 70px 40px 0;
     transition: right 0.2s ease;
+  }
+
+  .navbar .menu-links > li > a {
+    color: var(--white-color);
+  }
+
+  .navbar .menu-links .header-button {
+    font-size: 12px;
   }
 
   header.show-mobile-menu .navbar .menu-links {
@@ -237,6 +262,7 @@ header .navbar {
   .footer-brand-content {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 
   .footer-brand-content-description {
