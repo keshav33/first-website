@@ -68,6 +68,25 @@
   height: 100%;
   object-fit: cover;
   aspect-ratio: 16 / 7;
+  cursor: pointer;
+  transition: transform 0.3s ease-out;
+  animation: homeImageEntrance 700ms ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes homeImageEntrance {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.home-image:hover {
+  transform: scale(1.03);
 }
 
 .home-image-1 {
