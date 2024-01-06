@@ -11,7 +11,18 @@
     var(--green-color),
     var(--hover-green-color)
   );
+  --nav-font-size: 20px;
+  --nav-tablet-font-size: 20px;
+  --nav-tablet-font-size: 14px;
   --header-size: 60px;
+  --header-massive-font-size: 82px;
+  --subheader-massive-font-size: 36px;
+  --button-font-size: 18px;
+  --button-mobile-font-size: 18px;
+  --header-big-font-size: 58px;
+  --subheader-big-font-size: 28px;
+  --header-font-size: 48px;
+  --subheader-big-font-size: 22px;
 }
 
 * {
@@ -39,12 +50,9 @@ header .navbar {
 }
 
 .navbar .logo {
-  color: var(--white-color);
-  font-weight: 600;
-  font-size: 2.1rem;
-  text-decoration: none;
   width: 120px;
-  margin: 0px 40px;
+  margin: 0px 20px;
+  padding-top: 10px;
 }
 
 .navbar .menu-links {
@@ -56,7 +64,7 @@ header .navbar {
 
 .navbar a {
   color: var(--white-color);
-  font-size: 20px;
+  font-size: var(--nav-font-size);
   text-decoration: none;
   transition: 0.2s ease;
 }
@@ -71,11 +79,10 @@ header .navbar {
 
 .navbar-main {
   background-color: var(--black-color);
-  padding-bottom: 10px;
 }
 
 .header-button {
-  font-size: 18px;
+  font-size: var(--button-font-size);
   font-weight: 500;
   background-color: transparent;
   background-image: var(--green-gradient);
@@ -191,10 +198,10 @@ header .navbar {
 
 @media (max-width: 1200px) {
   .header-button {
-    font-size: 14px;
+    font-size: var(--nav-tablet-font-size);
   }
   .navbar a {
-    font-size: 14px;
+    font-size: var(--nav-tablet-font-size);
   }
 }
 
@@ -214,11 +221,7 @@ header .navbar {
   }
 
   .navbar .logo {
-    font-size: 1.7rem;
-  }
-
-  .navbar .logo:hover {
-    font-size: 1.7rem;
+    margin-left: 20px;
   }
 
   #hamburger-btn,
@@ -267,5 +270,14 @@ header .navbar {
 
   .footer-brand-content-description {
     width: 100%;
+  }
+
+  .footer-logo {
+    width: 120px;
+  }
+
+  .footer-brand-content {
+    flex-direction: column;
+    align-items: baseline;
   }
 }

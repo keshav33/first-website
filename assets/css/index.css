@@ -16,13 +16,13 @@
 }
 
 .home-content-heading {
-  font-size: 82px;
+  font-size: var(--header-massive-font-size);
   font-weight: 600;
   line-height: 60px;
 }
 
 .home-content-subheading {
-  font-size: 36px;
+  font-size: var(--subheader-massive-font-size);
   font-weight: 600;
   line-height: 50px;
   color: var(--white-color);
@@ -30,14 +30,14 @@
 }
 
 .home-content-get-started-heading {
-  font-size: 36px;
+  font-size: var(--subheader-massive-font-size);
   font-weight: 600;
   line-height: 50px;
   color: var(--white-color);
 }
 
 .home-content-get-started-button {
-  font-size: 18px;
+  font-size: var(--button-font-size);
   font-weight: 400;
   background-color: transparent;
   background-image: var(--green-gradient);
@@ -46,6 +46,12 @@
   color: var(--black-color);
   cursor: pointer;
   border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.material-symbols-outlined {
+  background: transparent;
 }
 
 .home-images-container {
@@ -101,69 +107,42 @@
   }
 
   .home-content-heading {
-    font-size: 58px;
+    font-size: var(--header-big-font-size);
     font-weight: 600;
     line-height: 60px;
   }
 
   .home-content-subheading {
-    font-size: 28px;
+    font-size: var(--subheader-big-font-size);
     font-weight: 600;
     line-height: 40px;
     color: var(--white-color);
     opacity: 0.7;
   }
   .home-content-get-started-heading {
-    font-size: 28px;
+    font-size: var(--subheader-big-font-size);
     font-weight: 600;
     line-height: 40px;
     color: var(--white-color);
   }
 }
 
-/* @media (max-width: 800px) {
-  .home-image-1 {
-    grid-column: 1 / span 3;
-    grid-row: 1 / span 4;
-  }
-
-  .home-image-2 {
-    grid-column: 4 / span 6;
-    grid-row: 1 / span 4;
-  }
-
-  .home-image-3 {
-    grid-column: 1 / span 2;
-    grid-row: 5 / span 6;
-  }
-
-  .home-image-4 {
-    grid-column: 3 / span 4;
-    grid-row: 5 / span 6;
-  }
-
-  .home-image-5 {
-    grid-column: 1 / span 9;
-    grid-row: 10;
-  }
-} */
-
 @media (max-width: 650px) {
   .home-content-heading {
-    font-size: 48px;
+    font-size: var(--header-font-size);
     font-weight: 600;
     line-height: 60px;
   }
 
   .home-content-subheading {
-    font-size: 22px;
+    font-size: var(--subheader-font-size);
     font-weight: 600;
     line-height: 30px;
     color: var(--white-color);
     opacity: 0.7;
   }
   .home-content-get-started-heading {
-    font-size: 22px;
+    font-size: var(--subheader-font-size);
     font-weight: 600;
     line-height: 30px;
     color: var(--white-color);
