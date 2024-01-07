@@ -15,14 +15,13 @@
   --nav-tablet-font-size: 20px;
   --nav-tablet-font-size: 14px;
   --header-size: 60px;
-  --header-massive-font-size: 82px;
+  --header-massive-font-size: 105px;
   --subheader-massive-font-size: 36px;
   --button-font-size: 18px;
   --button-mobile-font-size: 18px;
-  --header-big-font-size: 58px;
+  --header-big-font-size: 68px;
   --subheader-big-font-size: 28px;
   --header-font-size: 48px;
-  --subheader-big-font-size: 22px;
 }
 
 * {
@@ -51,7 +50,7 @@ header .navbar {
 
 .navbar .logo {
   width: 120px;
-  margin: 0px 20px;
+  margin: 0px 80px;
   padding-top: 10px;
 }
 
@@ -91,7 +90,7 @@ header .navbar {
   color: var(--black-color);
   cursor: pointer;
   border-radius: 6px;
-  margin: 20px 40px;
+  margin: 20px 80px 20px 0px;
 }
 
 #close-menu-btn {
@@ -196,7 +195,7 @@ header .navbar {
   margin-top: 60px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1240px) {
   .header-button {
     font-size: var(--nav-tablet-font-size);
   }
@@ -205,7 +204,7 @@ header .navbar {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1090px) {
   header {
     padding: 10px;
   }
