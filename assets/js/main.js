@@ -8,8 +8,8 @@ window.onload = function () {
 		// Close mobile menu on close button click
 		closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
 		// highlight selected page
-		document.querySelectorAll(".navbar a").forEach(link => {
-			if (window.location.href.includes(link.href)) {
+		document.querySelectorAll(".header a").forEach(link => {
+			if (window.location.href === link.href) {
 				link.setAttribute("aris-current", "page")
 			}
 		})
