@@ -7,6 +7,12 @@ window.onload = function () {
 		hamburgerBtn.addEventListener("click", () => header.classList.toggle("show-mobile-menu"));
 		// Close mobile menu on close button click
 		closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
+		// highlight selected page
+		document.querySelectorAll(".navbar a").forEach(link => {
+			if (window.location.href.includes(link.href)) {
+				link.setAttribute("aris-current", "page")
+			}
+		})
 	})
 	$("#footer").load("/footer.html");
 }

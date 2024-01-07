@@ -69,11 +69,19 @@ header .navbar {
 }
 
 .navbar a:hover {
-  color: var(--green-color);
+  color: var(--hover-green-color);
 }
 
 .navbar .logo:hover {
   color: black;
+}
+
+.navbar a[aris-current="page"] {
+  color: var(--green-color);
+}
+
+.navbar a[aris-current="page"]:hover {
+  color: var(--hover-green-color);
 }
 
 .navbar-main {
@@ -221,6 +229,14 @@ header .navbar {
 
   .navbar .logo {
     margin-left: 20px;
+  }
+
+  .navbar a[aris-current="page"] {
+    color: var(--green-color) !important;
+  }
+
+  .navbar a[aris-current="page"]:hover {
+    color: var(--hover-green-color) !important;
   }
 
   #hamburger-btn,
