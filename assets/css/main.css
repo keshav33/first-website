@@ -37,6 +37,75 @@
   background-color: var(--black-color);
 }
 
+.bubble-effect-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bubble-effect {
+  width: 200px;
+  height: 200px;
+  background-color: #99e752;
+  border-radius: 50%;
+  filter: blur(150px);
+  position: relative;
+  animation: blink 5s linear infinite;
+  animation-fill-mode: both;
+  z-index: 20;
+}
+
+.bubble1 {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  animation-delay: 0s;
+}
+
+.bubble2 {
+  position: absolute;
+  right: 0px;
+  animation-delay: 1s;
+}
+
+.bubble3 {
+  position: absolute;
+  bottom: 50px;
+  animation-delay: 2s;
+}
+
+.bubble4 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 3s;
+}
+
+.bubble5 {
+  position: absolute;
+  right: 0px;
+  bottom: 50px;
+  animation-delay: 4s;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 header {
   position: fixed;
   top: 0;
@@ -219,6 +288,11 @@ header .header {
 }
 
 @media (max-width: 1090px) {
+  .bubble-effect {
+    width: 140px;
+    height: 140px;
+    filter: blur(100px);
+  }
   header {
     padding: 10px;
   }
@@ -301,5 +375,13 @@ header .header {
   .footer-brand-content {
     flex-direction: column;
     align-items: baseline;
+  }
+}
+
+@media (max-width: 600px) {
+  .bubble-effect {
+    width: 80px;
+    height: 80px;
+    filter: blur(80px);
   }
 }
