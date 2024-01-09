@@ -15,13 +15,18 @@
   --nav-tablet-font-size: 20px;
   --nav-tablet-font-size: 14px;
   --header-size: 60px;
-  --header-massive-font-size: 105px;
-  --subheader-massive-font-size: 36px;
+  --heading-massive-font-size: 105px;
+  --subheading-massive-font-size: 36px;
   --button-font-size: 18px;
   --button-mobile-font-size: 18px;
-  --header-big-font-size: 68px;
-  --subheader-big-font-size: 28px;
-  --header-font-size: 48px;
+  --heading-big-font-size: 68px;
+  --subheading-big-font-size: 28px;
+  --heading-font-size: 48px;
+  --about-heading-font-size: 36px;
+  --about-subheading-font-size: 32px;
+  --about-subheading-medium-font-size: 26px;
+  --about-subheading-small-font-size: 22px;
+  --about-subheading-mobile-font-size: 18px;
 }
 
 * {

@@ -1,41 +1,58 @@
 .portfolio-container {
-  text-align: center;
-  background-image: url("https://shadesandmotion.com/wp-content/uploads/2023/04/Backdrop-new-2-1.webp");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  min-height: 100vh;
-  min-width: 100vw;
+  min-height: calc(100vh - var(--header-size));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--black-color);
+  padding: var(--header-size) 80px;
+  gap: 40px;
 }
 
 .portfolio-heading {
   font-weight: 500;
-  font-size: 62px;
-  padding: 30px;
+  font-size: var(--heading-font-size);
 }
 
-.portfolio-switch-container {
-  display: flex;
-  justify-content: center;
+.protfolio-image-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 40px;
+  column-gap: 30px;
 }
 
-.portfolio-switch-container .nav-link {
-  color: black;
-  background: white;
-  padding: 20px;
-  font-size: 18px;
-  width: 200px;
+.protfolio-image {
+  background-color: var(--white-color);
+  width: 600px;
+  height: 300px;
 }
 
-@media (max-width: 450px) {
-  .portfolio-switch-container .nav-link {
-    padding: 20px;
-    font-size: 18px;
-    width: 140px;
+@media (max-width: 1260px) {
+  .protfolio-image {
+    width: 400px;
+    height: 200px;
   }
+}
+
+@media (max-width: 860px) {
+  .protfolio-image-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .protfolio-image {
+    width: 460px;
+    height: 230px;
+  }
+}
+
+@media (max-width: 540px) {
   .portfolio-heading {
-    font-weight: 500;
-    font-size: 38px;
-    padding: 30px;
+    font-size: 30px;
+    width: max-content;
+  }
+  .protfolio-image-container {
+    gap: 20px;
+  }
+  .protfolio-image {
+    width: 300px;
+    height: 150px;
   }
 }

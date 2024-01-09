@@ -1,24 +1,66 @@
 .faqs-container {
+  min-height: calc(100vh - var(--header-size));
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.faqs-heading-container {
-  background-image: url("https://shadesandmotion.com/wp-content/uploads/2023/04/Backdrop-new-2-1.webp");
-  background-position: center;
-  height: 20vh;
-  min-width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: var(--black-color);
+  padding: var(--header-size) 80px;
+  gap: 40px;
 }
 
 .faqs-heading {
   font-weight: 500;
-  font-size: 62px;
+  font-size: var(--heading-font-size);
+}
+
+.faqs-questions-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 40px;
+  column-gap: 30px;
 }
 
 .faqs-questions-container .accordion {
-  width: 80vw;
+  width: 600px;
+  background-color: var(--white-color);
+  padding: 40px;
+}
+
+.faqs-questions-container .accordion > h3 {
+  background: transparent;
+}
+
+.faqs-questions-container
+  .accordion
+  .accordion-header
+  .accordion-button[aria-expanded="true"] {
+  background-color: var(--black-color);
+  color: var(--white-color);
+  border-radius: 0px 0px 30px 30px;
+}
+
+.faqs-questions-container .accordion .accordion-body {
+  background-color: #bfbfbf;
+}
+
+.faqs-questions-container .accordion .accordion-header {
+  background-color: #bfbfbf;
+}
+
+@media (max-width: 1260px) {
+  .faqs-questions-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .faqs-questions-container .accordion {
+    width: 800px;
+  }
+}
+
+@media (max-width: 860px) {
+  .faqs-questions-container .accordion {
+    width: 90vw;
+  }
+  .faqs-questions-container .accordion {
+    padding: 20px;
+  }
 }

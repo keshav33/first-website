@@ -1,47 +1,81 @@
-.about-hero-image {
-  width: -webkit-fill-available;
+.about-container {
+  min-height: calc(100vh - var(--header-size));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--black-color);
+  padding: var(--header-size) 80px;
+  gap: 40px;
+}
+
+.about-hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-hero-image-container {
+  display: grid;
+  grid-template-areas:
+    "image1 image1 image1 image2 image2 image2 image3 image3 image4 image4"
+    "image1 image1 image1 image2 image2 image2 image3 image3 image4 image4"
+    "image1 image1 image1 image2 image2 image2 image3 image3 image4 image4"
+    "image1 image1 image1 image5 image5 image5 image3 image3 image6 image6"
+    "image1 image1 image1 image5 image5 image5 image3 image3 image6 image6";
+  gap: 20px;
+  width: 100vw;
+  padding-left: 80px;
+  padding-right: 80px;
+  flex: 1;
+}
+
+.about-hero-content-container {
+  flex: 1;
+}
+
+.about-image-1 {
+  grid-area: image1;
+}
+
+.about-image-2 {
+  grid-area: image2;
+}
+
+.about-image-3 {
+  grid-area: image3;
+}
+
+.about-image-4 {
+  grid-area: image4;
+}
+
+.about-image-5 {
+  grid-area: image5;
+}
+
+.about-image-6 {
+  grid-area: image6;
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .about-primary-heading {
   font-weight: 400;
-  font-size: 32px;
-  line-height: 40px;
-}
-
-.about-secondary-heading {
-  font-weight: 400;
-  font-size: 42px;
-  line-height: 40px;
-}
-
-.about-description {
-  width: 600px;
+  font-size: var(--about-heading-font-size);
   text-align: center;
 }
 
-.what-we-do-section {
-  background-color: #fc6a47;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.what-we-do-heading {
+.about-subheading {
   font-weight: 400;
-  font-size: 52px;
-  line-height: 40px;
+  font-size: var(--about-subheading-font-size);
+  line-height: 38px;
   color: #fff;
-}
-
-.what-we-do-image-container {
-  display: flex;
-  gap: 40px;
-}
-
-.what-we-do-image {
-  width: 400px;
-  height: 400px;
+  text-align: center;
+  opacity: 0.8;
 }
 
 .about-our-team {
@@ -59,7 +93,7 @@
 .about-our-team-container {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
 }
 
 .team-member {
@@ -69,64 +103,80 @@
 }
 
 .team-member-image {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
 }
 
-.team-member-name,
+.team-member-name {
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 36px;
+  color: var(--white-color);
+}
+
 .team-member-profile {
   font-weight: 200;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 20px;
-}
-
-.hire-us-container {
-  background-image: url(https://shadesandmotion.com/wp-content/uploads/2023/04/Home-Eleven-Trusted-Background-Image.png.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  opacity: 0.8;
+  color: var(--white-color);
 }
 
 .hire-us-container {
   width: 100vw;
-  color: #fff;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.hire-us-heading {
+.hire-us-main-heading {
   font-weight: 400;
   font-size: 32px;
   line-height: 30px;
+  color: var(--black-color);
+  background-color: transparent;
+}
+
+.hire-us-heading {
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 30px;
+  color: var(--black-color);
+  background-color: transparent;
 }
 
 .hire-us-subheading {
-  font-weight: 200;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 26px;
   line-height: 30px;
-  width: 750px;
   text-align: center;
+  color: var(--black-color);
+  background-color: transparent;
 }
 
 .contact-us-today-button {
-  font-size: 17px;
-  font-weight: 200;
+  font-size: var(--button-font-size);
+  font-weight: 400;
   background-color: transparent;
-  background-image: linear-gradient(105deg, #fc6a47 16%, #ff9839 100%);
-  padding: 15px 30px 14px 30px;
+  background-image: var(--green-gradient);
+  padding: 12px 24px;
   border: none;
-  color: #fff;
+  color: var(--black-color);
   cursor: pointer;
-  width: 250px;
-  height: 60px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1580px) {
+  .about-subheading {
+    font-size: var(--about-subheading-medium-font-size);
+  }
 }
 
 @media (max-width: 1300px) {
-  .what-we-do-image {
-    width: 300px;
-    height: 300px;
-  }
   .team-member-image {
     width: 300px;
     height: 300px;
@@ -136,108 +186,108 @@
   }
 }
 
-@media (max-width: 1000px) {
-  .what-we-do-heading {
-    font-weight: 400;
-    font-size: 42px;
-    line-height: 40px;
-    color: #fff;
-  }
-  .what-we-do-image-container {
-    flex-direction: column;
-    gap: 80px;
-  }
-  .what-we-do-image {
-    width: 800px;
-    height: 800px;
+@media (max-width: 1230px) {
+  .about-subheading {
+    font-size: var(--about-subheading-small-font-size);
   }
 }
 
-@media (max-width: 850px) {
-  .what-we-do-heading {
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 40px;
-    color: #fff;
+@media (max-width: 1090px) {
+  .about-subheading {
+    font-size: var(--about-subheading-mobile-font-size);
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: left;
   }
-  .what-we-do-image {
-    width: 600px;
-    height: 600px;
-  }
-}
 
-@media (max-width: 780px) {
+  .about-hero-image-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 10px;
+  }
+
+  .hire-us-main-heading {
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+  }
+
   .hire-us-heading {
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 30px;
   }
+
   .hire-us-subheading {
-    width: 600px;
-  }
-}
-
-@media (max-width: 630px) {
-  .what-we-do-image {
-    width: 400px;
-    height: 400px;
-  }
-
-  .about-description {
-    width: 400px;
-    text-align: center;
-  }
-
-  .what-we-do-heading {
     font-weight: 400;
-    font-size: 24px;
-    line-height: 40px;
-    color: #fff;
-  }
-
-  .hire-us-subheading {
-    width: 400px;
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
-@media (max-width: 520px) {
-  .hire-us-heading {
-    text-align: center;
-    line-height: 40px;
-    width: 300px;
-  }
-  .hire-us-subheading {
-    width: 300px;
-  }
-}
-
-@media (max-width: 490px) {
+@media (max-width: 650px) {
   .about-primary-heading {
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
-
-  .about-secondary-heading {
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 40px;
-  }
-  .about-description {
-    width: 300px;
-    text-align: center;
-  }
-
-  .what-we-do-heading {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 40px;
-    color: #fff;
-  }
-
-  .what-we-do-image {
-    width: 300px;
-    height: 300px;
-  }
-
   .about-our-team-heading {
     font-size: 32px;
+    width: max-content;
+  }
+  .team-member-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+
+  .team-member-name {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 36px;
+    color: var(--white-color);
+  }
+
+  .team-member-profile {
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 20px;
+    opacity: 0.8;
+    color: var(--white-color);
+  }
+  .hire-us-main-heading {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hire-us-heading {
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hire-us-subheading {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .contact-us-today-button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 650px) {
+  .about-primary-heading {
+    font-size: 28px;
+  }
+  .hire-us-main-heading {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
