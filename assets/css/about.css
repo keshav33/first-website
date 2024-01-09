@@ -17,11 +17,11 @@
 .about-hero-image-container {
   display: grid;
   grid-template-areas:
-    "image1 image1 image1 image2 image2 image2 image3 image3 image4 image4"
-    "image1 image1 image1 image2 image2 image2 image3 image3 image4 image4"
-    "image1 image1 image1 image2 image2 image2 image3 image3 image4 image4"
-    "image1 image1 image1 image5 image5 image5 image3 image3 image6 image6"
-    "image1 image1 image1 image5 image5 image5 image3 image3 image6 image6";
+    "image1 image1 image1 image1 image2 image2 image2 image3 image3 image4 image4"
+    "image1 image1 image1 image1 image2 image2 image2 image3 image3 image4 image4"
+    "image1 image1 image1 image1 image2 image2 image2 image3 image3 image4 image4"
+    "image1 image1 image1 image1 image5 image5 image5 image3 image3 image6 image6"
+    "image1 image1 image1 image1 image5 image5 image5 image3 image3 image6 image6";
   gap: 20px;
   width: 100vw;
   padding-left: 80px;
