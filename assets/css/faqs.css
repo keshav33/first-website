@@ -21,7 +21,7 @@
 }
 
 .faqs-questions-container .accordion {
-  width: 600px;
+  width: 45vw;
   background-color: var(--white-color);
   padding: 40px;
 }
