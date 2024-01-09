@@ -58,26 +58,26 @@
 }
 
 .bubble1 {
-  position: absolute;
+  position: fixed;
   top: 50px;
   left: 0px;
   animation-delay: 0s;
 }
 
 .bubble2 {
-  position: absolute;
+  position: fixed;
   right: 0px;
   animation-delay: 1s;
 }
 
 .bubble3 {
-  position: absolute;
+  position: fixed;
   bottom: 50px;
   animation-delay: 2s;
 }
 
 .bubble4 {
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -85,7 +85,7 @@
 }
 
 .bubble5 {
-  position: absolute;
+  position: fixed;
   right: 0px;
   bottom: 50px;
   animation-delay: 4s;
