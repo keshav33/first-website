@@ -173,6 +173,7 @@
 @media (max-width: 1580px) {
   .about-subheading {
     font-size: var(--about-subheading-medium-font-size);
+    line-height: 30px;
   }
 }
 
@@ -198,6 +199,7 @@
     padding-left: 20px;
     padding-right: 20px;
     text-align: left;
+    line-height: 26px;
   }
 
   .about-hero-image-container {
@@ -221,7 +223,7 @@
   .hire-us-subheading {
     font-weight: 400;
     font-size: 20px;
-    line-height: 30px;
+    line-height: 24px;
   }
 }
 
@@ -273,7 +275,7 @@
   .hire-us-subheading {
     font-weight: 400;
     font-size: 18px;
-    line-height: 30px;
+    line-height: 22px;
     padding-left: 20px;
     padding-right: 20px;
   }
