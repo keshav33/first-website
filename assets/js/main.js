@@ -15,4 +15,11 @@ window.onload = function () {
 		})
 	})
 	$("#footer").load("/footer.html");
+	const spaceWidth = window.innerWidth;
+	const spaceHeight = window.innerHeight;
+	const bubble = document.querySelector(".bubble");
+	setInterval(() => {
+		bubble.style.top = Math.round(Math.random() * spaceWidth) + "px";
+		bubble.style.left = Math.round(Math.random() * spaceHeight) + "px";
+	}, 1000);
 }

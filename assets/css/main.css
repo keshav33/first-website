@@ -52,57 +52,20 @@
   border-radius: 50%;
   filter: blur(150px);
   position: relative;
-  animation: blink 5s linear infinite;
-  animation-fill-mode: both;
   z-index: 20;
 }
 
-.bubble1 {
-  position: fixed;
-  top: 50px;
-  left: 0px;
-  animation-delay: 0s;
-}
-
-.bubble2 {
-  position: fixed;
-  right: 0px;
-  animation-delay: 1s;
-}
-
-.bubble3 {
-  position: fixed;
-  bottom: 50px;
-  animation-delay: 2s;
-}
-
-.bubble4 {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  animation-delay: 3s;
-}
-
-.bubble5 {
-  position: fixed;
-  right: 0px;
-  bottom: 50px;
-  animation-delay: 4s;
+.bubble {
+  position: absolute;
+  animation: blink 0.5s linear infinite alternate;
 }
 
 @keyframes blink {
-  0% {
+  from {
     opacity: 0;
   }
-  25% {
+  to {
     opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
   }
 }
 
