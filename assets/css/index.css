@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 .home-container {
   min-height: calc(100vh - var(--header-size));
   display: flex;
@@ -18,7 +22,7 @@
 .home-content-heading {
   font-size: var(--heading-massive-font-size);
   font-weight: 600;
-  line-height: 112px;
+  line-height: 60px;
 }
 
 .home-content-subheading {
@@ -37,6 +41,12 @@
   color: var(--white-color);
 }
 
+.get-started-btton-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
 .home-content-get-started-button {
   font-size: var(--button-font-size);
   font-weight: 400;
@@ -49,6 +59,43 @@
   border-radius: 6px;
   display: flex;
   align-items: center;
+}
+
+.button-seprator-text {
+  font-size: 24px;
+}
+
+.scroll-mouse {
+  width: 40px;
+  height: 70px;
+  border: 3px solid var(--green-color);
+  border-radius: 60px;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.scroll-mouse::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--green-color);
+  border-radius: 50%;
+  opacity: 1;
+  animation: scroll-mouse-wheel 2s infinite;
+  -webkit-animation: scroll-mouse-wheel 2s infinite;
+  z-index: 2;
+}
+
+@keyframes scroll-mouse-wheel {
+  to {
+    opacity: 0;
+    top: 50px;
+  }
 }
 
 .material-symbols-outlined {
@@ -133,7 +180,7 @@
   .home-content-heading {
     font-size: var(--heading-big-font-size);
     font-weight: 600;
-    line-height: 60px;
+    line-height: 50px;
   }
 
   .home-content-subheading {
@@ -165,7 +212,7 @@
   .home-content-heading {
     font-size: var(--heading-font-size);
     font-weight: 600;
-    line-height: 60px;
+    line-height: 40px;
   }
 
   .home-content-subheading {
@@ -184,5 +231,19 @@
   }
   .home-images-container {
     gap: 10px;
+  }
+  .home-content-get-started-button {
+    font-size: var(--button-small-font-size) !important;
+    font-weight: 300 !important;
+    padding: 12px 18px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .get-started-btton-container {
+    gap: 10px;
+  }
+  .home-content-get-started-button {
+    padding: 12px 12px !important;
   }
 }

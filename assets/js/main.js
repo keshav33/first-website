@@ -13,13 +13,33 @@ window.onload = function () {
 				link.setAttribute("aris-current", "page")
 			}
 		})
+		window.addEventListener("hashchange", (event) => {
+			if (window.location.href === event.newURL) {
+				document.querySelectorAll(".header a").forEach(link => {
+					if (event.newURL === link.href) {
+						link.setAttribute("aris-current", "page")
+					} else {
+						link.removeAttribute("aris-current", "page")
+					}
+				})
+			}
+		})
 	})
 	$("#footer").load("/footer.html");
+
 	const spaceWidth = window.innerWidth;
 	const spaceHeight = window.innerHeight;
 	const bubble = document.querySelector(".bubble");
 	setInterval(() => {
 		bubble.style.top = Math.round(Math.random() * spaceWidth) + "px";
 		bubble.style.left = Math.round(Math.random() * spaceHeight) + "px";
-	}, 1000);
+	}, 2000);
+
+	const cards = document.querySelectorAll('.our-services-card');
+
+	[...cards].forEach((card) => {
+		card.addEventListener('click', function () {
+			card.classList.toggle('is-flipped');
+		});
+	});
 }

@@ -1,9 +1,7 @@
 .about-container {
-  min-height: calc(100vh - var(--header-size));
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--black-color);
   padding: var(--header-size) 80px;
   gap: 40px;
 }
@@ -14,53 +12,8 @@
   align-items: center;
 }
 
-.about-hero-image-container {
-  display: grid;
-  grid-template-areas:
-    "image1 image1 image1 image1 image2 image2 image2 image3 image3 image4 image4"
-    "image1 image1 image1 image1 image2 image2 image2 image3 image3 image4 image4"
-    "image1 image1 image1 image1 image2 image2 image2 image3 image3 image4 image4"
-    "image1 image1 image1 image1 image5 image5 image5 image3 image3 image6 image6"
-    "image1 image1 image1 image1 image5 image5 image5 image3 image3 image6 image6";
-  gap: 20px;
-  width: 100vw;
-  padding-left: 80px;
-  padding-right: 80px;
-  flex: 1;
-}
-
 .about-hero-content-container {
   flex: 1;
-}
-
-.about-image-1 {
-  grid-area: image1;
-}
-
-.about-image-2 {
-  grid-area: image2;
-}
-
-.about-image-3 {
-  grid-area: image3;
-}
-
-.about-image-4 {
-  grid-area: image4;
-}
-
-.about-image-5 {
-  grid-area: image5;
-}
-
-.about-image-6 {
-  grid-area: image6;
-}
-
-.about-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .about-primary-heading {
@@ -86,14 +39,14 @@
 
 .about-our-team-heading {
   font-weight: 400;
-  font-size: 52px;
+  font-size: var(--page-heading-font-size);
   line-height: 40px;
 }
 
 .about-our-team-container {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 80px;
 }
 
 .team-member {
@@ -103,9 +56,10 @@
 }
 
 .team-member-image {
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .team-member-name {
@@ -123,39 +77,6 @@
   color: var(--white-color);
 }
 
-.hire-us-container {
-  width: 100vw;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.hire-us-main-heading {
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 30px;
-  color: var(--black-color);
-  background-color: transparent;
-}
-
-.hire-us-heading {
-  font-weight: 800;
-  font-size: 32px;
-  line-height: 30px;
-  color: var(--black-color);
-  background-color: transparent;
-}
-
-.hire-us-subheading {
-  font-weight: 400;
-  font-size: 26px;
-  line-height: 30px;
-  text-align: center;
-  color: var(--black-color);
-  background-color: transparent;
-}
-
 .contact-us-today-button {
   font-size: var(--button-font-size);
   font-weight: 400;
@@ -170,13 +91,6 @@
   align-items: center;
 }
 
-@media (max-width: 1580px) {
-  .about-subheading {
-    font-size: var(--about-subheading-medium-font-size);
-    line-height: 30px;
-  }
-}
-
 @media (max-width: 1300px) {
   .team-member-image {
     width: 300px;
@@ -187,19 +101,12 @@
   }
 }
 
-@media (max-width: 1230px) {
-  .about-subheading {
-    font-size: var(--about-subheading-small-font-size);
-  }
-}
-
 @media (max-width: 1090px) {
+  .about-container {
+    padding: var(--header-size) 40px;
+  }
   .about-subheading {
-    font-size: var(--about-subheading-mobile-font-size);
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: left;
-    line-height: 26px;
+    font-size: var(--about-subheading-medium-font-size);
   }
 
   .about-hero-image-container {
@@ -228,14 +135,13 @@
 }
 
 @media (max-width: 650px) {
-  .about-primary-heading {
-    padding-left: 20px;
-    padding-right: 20px;
+  .about-container {
+    padding: var(--header-size) 20px;
   }
-  .about-our-team-heading {
-    font-size: 32px;
-    width: max-content;
+  .about-subheading {
+    font-size: var(--about-subheading-small-font-size);
   }
+
   .team-member-image {
     width: 200px;
     height: 200px;
@@ -284,12 +190,8 @@
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 540px) {
   .about-primary-heading {
-    font-size: 28px;
-  }
-  .hire-us-main-heading {
-    padding-left: 10px;
-    padding-right: 10px;
+    font-size: 42px;
   }
 }

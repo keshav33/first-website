@@ -10,7 +10,7 @@
 
 .faqs-heading {
   font-weight: 500;
-  font-size: var(--heading-font-size);
+  font-size: var(--page-heading-font-size);
 }
 
 .faqs-questions-container {
@@ -62,5 +62,12 @@
   }
   .faqs-questions-container .accordion {
     padding: 20px;
+  }
+}
+
+@media (max-width: 540px) {
+  .faqs-heading {
+    font-size: 42px;
+    width: max-content;
   }
 }

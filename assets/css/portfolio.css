@@ -10,7 +10,7 @@
 
 .portfolio-heading {
   font-weight: 500;
-  font-size: var(--heading-font-size);
+  font-size: var(--page-heading-font-size);
 }
 
 .protfolio-image-container {
@@ -45,7 +45,7 @@
 
 @media (max-width: 540px) {
   .portfolio-heading {
-    font-size: 30px;
+    font-size: 42px;
     width: max-content;
   }
   .protfolio-image-container {

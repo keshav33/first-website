@@ -1,0 +1,225 @@
+.our-service-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--header-size) 80px;
+  gap: 40px;
+}
+
+.trusted-by-heading {
+  background-color: var(--white-color);
+  font-size: 32px;
+}
+
+.why-us-container,
+.trusted-by-container {
+  width: 100vw;
+  background-color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.why-us-service {
+  background-color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trusted-by-brand-container {
+  background-color: var(--white-color);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 40px;
+  column-gap: 80px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.brand-logo {
+  background-color: var(--white-color);
+  width: 200px;
+}
+
+.why-us-service-container {
+  background-color: var(--white-color);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 40px;
+  column-gap: 80px;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0px;
+  width: 100vw;
+}
+
+.why-us-count-text {
+  font-weight: 800;
+  font-size: 72px;
+}
+
+.our-services-heading {
+  font-weight: 500;
+  font-size: var(--page-heading-font-size);
+}
+
+.our-services-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 40px;
+  column-gap: 40px;
+}
+
+.our-services-card {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+
+.our-services-card:hover {
+  transform: scale(1.03);
+}
+
+.our-services-card.is-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.our-services-card-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transform-style: preserve-3d;
+  background: var(--white-color);
+  border-radius: 10px;
+}
+
+.our-services-card-image {
+  width: 90%;
+  height: 80%;
+  background: var(--white-color);
+  padding: 10px;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.our-services-card-heading {
+  font-size: var(--about-subheading-medium-font-size);
+  background: var(--white-color);
+}
+
+.work-with-us-button {
+  font-size: 18px;
+  font-weight: 600;
+  background-color: transparent;
+  background-image: var(--green-gradient);
+  padding: 12px 24px;
+  border: none;
+  color: var(--black-color);
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.our-services-card-front,
+.our-services-card-back {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.our-services-card-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+  transform: rotateY(180deg);
+}
+
+.our-services-card-back-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background: var(--white-color);
+  text-align: center;
+}
+
+.our-services-card-button-container {
+  background: var(--white-color);
+}
+
+@media (max-width: 1300px) {
+  .our-services-card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1090px) {
+  .trusted-by-brand-container {
+    margin-top: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 40px;
+    column-gap: 80px;
+  }
+  .brand-logo {
+    width: 150px;
+  }
+}
+
+@media (max-width: 900px) {
+  .our-services-card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .why-us-service-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .our-services-card {
+    width: 300px;
+    height: 300px;
+  }
+  .our-services-card-back-content {
+    font-size: 12px;
+  }
+  .work-with-us-button {
+    font-size: 12px;
+  }
+  .trusted-by-heading {
+    font-size: 26px;
+  }
+  .brand-logo {
+    width: 120px;
+  }
+  .trusted-by-brand-container {
+    row-gap: 30px;
+    column-gap: 30px;
+  }
+}
+
+@media (max-width: 540px) {
+  .our-services-heading {
+    font-size: 42px;
+    width: max-content;
+  }
+}

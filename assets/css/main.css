@@ -15,14 +15,15 @@
   --nav-tablet-font-size: 20px;
   --nav-tablet-font-size: 14px;
   --header-size: 60px;
-  --heading-massive-font-size: 105px;
+  --heading-massive-font-size: 52px;
   --subheading-massive-font-size: 36px;
-  --button-font-size: 18px;
-  --button-mobile-font-size: 18px;
-  --heading-big-font-size: 68px;
+  --button-font-size: 24px;
+  --button-mobile-font-size: 14px;
+  --heading-big-font-size: 42px;
   --subheading-big-font-size: 28px;
-  --heading-font-size: 48px;
-  --about-heading-font-size: 36px;
+  --heading-font-size: 26px;
+  --page-heading-font-size: 52px;
+  --about-heading-font-size: 52px;
   --about-subheading-font-size: 32px;
   --about-subheading-medium-font-size: 26px;
   --about-subheading-small-font-size: 22px;
@@ -35,6 +36,11 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   background-color: var(--black-color);
+  scroll-margin: var(--header-size) 0px 0px 0px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .bubble-effect-background {
@@ -57,7 +63,7 @@
 
 .bubble {
   position: absolute;
-  animation: blink 0.5s linear infinite alternate;
+  animation: blink 1s linear infinite alternate;
 }
 
 @keyframes blink {
@@ -127,7 +133,7 @@ header .header {
 }
 
 .header-button {
-  font-size: var(--button-font-size);
+  font-size: 18px;
   font-weight: 500;
   background-color: transparent;
   background-image: var(--green-gradient);
@@ -169,7 +175,7 @@ header .header {
   width: 100vw;
   display: flex;
   justify-content: space-between;
-  padding: 40px;
+  padding: 40px 80px;
 }
 
 .footer-brand-content-description {
@@ -319,6 +325,7 @@ header .header {
   .footer {
     flex-direction: column;
     gap: 40px;
+    padding: 40px 30px;
   }
 
   .footer-brand-content {
