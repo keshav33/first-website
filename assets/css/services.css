@@ -57,11 +57,10 @@
 .why-us-count-text {
   font-weight: 800;
   font-size: 72px;
-  background: transparent;
 }
 
-.stat-suffix {
-  margin-left: -10px;
+.why-us-count-text::after {
+  content: "+";
 }
 
 .our-services-heading {
