@@ -201,7 +201,7 @@
 @media (max-width: 500px) {
   .our-services-card {
     width: 300px;
-    height: 400px;
+    height: 300px;
   }
   .our-services-card-back-content {
     font-size: 12px;

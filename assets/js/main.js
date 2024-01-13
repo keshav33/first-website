@@ -1,4 +1,7 @@
 window.onload = function () {
+	$("#loader").fadeOut(500, function () {
+		$("#loader").remove();
+	});
 	$("#header").load("/header.html", () => {
 		const header = document.querySelector("header");
 		const hamburgerBtn = document.querySelector("#hamburger-btn");
