@@ -237,6 +237,17 @@ a {
     font-weight: 300 !important;
     padding: 12px 18px !important;
   }
+  .scroll-mouse {
+    width: 40px;
+    height: 60px;
+  }
+
+  @keyframes scroll-mouse-wheel {
+    to {
+      opacity: 0;
+      top: 40px;
+    }
+  }
 }
 
 @media (max-width: 400px) {
