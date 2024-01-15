@@ -184,6 +184,9 @@
   .brand-logo {
     width: 150px;
   }
+  .our-service-container {
+    padding: var(--header-size) 40px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -195,6 +198,12 @@
 @media (max-width: 800px) {
   .why-us-service-container {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .our-service-container {
+    padding: var(--header-size) 20px;
   }
 }
 

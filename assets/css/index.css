@@ -66,35 +66,36 @@ a {
 }
 
 .scroll-mouse {
-  width: 40px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border: 3px solid var(--green-color);
-  border-radius: 60px;
+  border-radius: 50%;
   position: relative;
-  z-index: 2;
-  cursor: pointer;
+  animation: scroll-down 1.5s infinite;
+  -webkit-animation: scroll-down 1.5s infinite;
 }
 
 .scroll-mouse::before {
   content: "";
-  width: 16px;
-  height: 16px;
   position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: var(--green-color);
-  border-radius: 50%;
-  opacity: 1;
-  animation: scroll-mouse-wheel 2s infinite;
-  -webkit-animation: scroll-mouse-wheel 2s infinite;
-  z-index: 2;
+  top: 15px;
+  left: 18px;
+  width: 18px;
+  height: 18px;
+  border-left: 2px solid var(--green-color);
+  border-bottom: 2px solid var(--green-color);
+  transform: rotate(-45deg);
 }
 
-@keyframes scroll-mouse-wheel {
-  to {
-    opacity: 0;
-    top: 50px;
+@keyframes scroll-down {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translateY(15px);
+  }
+  40% {
+    transform: translate(0);
   }
 }
 
@@ -207,7 +208,7 @@ a {
 
 @media (max-width: 650px) {
   .home-container {
-    padding: var(--header-size) 40px;
+    padding: var(--header-size) 20px;
   }
   .home-content-heading {
     font-size: var(--heading-font-size);
@@ -239,7 +240,13 @@ a {
   }
   .scroll-mouse {
     width: 40px;
-    height: 60px;
+    height: 40px;
+  }
+  .scroll-mouse::before {
+    top: 10px;
+    left: 10px;
+    width: 12px;
+    height: 12px;
   }
 
   @keyframes scroll-mouse-wheel {
